@@ -1,7 +1,6 @@
 package com.qa.webapp.pages;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 
 import com.qa.webapp.utils.Constants;
@@ -46,6 +45,7 @@ public class HomePage {
 	public SearchResultsPage doSearch(String searchTerm) {
 		eleutil.waitForElementToBeVisible(searchBarId, Constants.DEFAULT_TIME_OUT).sendKeys(searchTerm);
 		eleutil.doClick(searchButton);
+		eleutil.waitForPageLoad(Constants.DEFAULT_TIME_OUT);
 		return new SearchResultsPage(driver);
 	}
 

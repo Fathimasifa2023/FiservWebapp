@@ -9,7 +9,7 @@
 			class-name="com.qa.webapp.listeners.ExtentReportListener" />
 			
 		<listener
-			class-name="com.qa.opencart.listeners.AnnotationTransformer" />
+			class-name="com.qa.webapp.listeners.AnnotationTransformer" />
 				
 	</listeners>	
 

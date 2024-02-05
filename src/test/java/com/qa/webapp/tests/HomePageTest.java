@@ -2,7 +2,6 @@ package com.qa.webapp.tests;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import com.qa.webapp.base.BaseTest;
 import com.qa.webapp.utils.Constants;
 import com.qa.webapp.utils.Errors;
@@ -35,8 +34,6 @@ public class HomePageTest extends BaseTest {
 	public void searchTest() {
 		Assert.assertTrue(homePage.isSearchBarExist());
 		homePage.doSearch(prop.getProperty("searchTerm").trim());
-	}
-
-	
+	}	
 	
 }
