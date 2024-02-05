@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Fiserv WebApp Test Suite" verbose="4" thread-count="4"
+	parallel="tests">
+	
+	<listeners>
+		<listener
+			class-name="com.qa.webapp.listeners.ExtentReportListener" />
+			
+		<listener
+			class-name="com.qa.opencart.listeners.AnnotationTransformer" />
+				
+	</listeners>	
+
+	<test name="Yahoo Home Page Test ">
+		<parameter name="browser" value="chrome" />
+		<parameter name="browserversion" value="121.0" />
+		<classes>
+			<class name="com.qa.webapp.tests.HomePageTest" />
+		</classes>
+	</test>
+	
+	<test name="Yahoo Search Results Page Test ">
+		<parameter name="browser" value="chrome" />
+		<parameter name="browserversion" value="121.0" />
+		<classes>
+			<class name="com.qa.webapp.tests.SearchResultsPageTest" />
+		</classes>
+	</test>
+
+	
+</suite>
